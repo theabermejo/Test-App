@@ -1,7 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[Users_CreateUser]
 	@Id int,
-	@Name nchar(10)
+	@Email varchar(256),
+	@Username varchar(50),
+	@Firstname varchar(50),
+	@Lastname varchar(50)
 AS
-	INSERT INTO Users (Id, Name) VALUES (@Id, @Name);
+	INSERT INTO Users (Id, Email, Username, Firstname, Lastname) VALUES (@Id, @Email, @Username, @Firstname, @Lastname);
 
 RETURN 0
